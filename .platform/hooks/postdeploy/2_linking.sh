@@ -17,7 +17,7 @@ ln -s /efs/storage/var/tmp .
 #linking /var/www/html/web/var directory with efs storage directory
 cd  /var/www/html/
 rm -rf var
-ln -s /efs/storage/web-var  var 
+ln -s /efs/storage  var 
 
 cd /var/www/html
 #if [ -d "builds" ]
