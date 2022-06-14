@@ -4,12 +4,12 @@
  #       useradd dev
 #fi
 
-usermod -a -G webapp dev
+#usermod -a -G webapp dev
 
 cd /var/www/html
 sudo chown -R webapp.webapp .
-#sudo find pimcore -type d -exec chmod 750 {} \;
-#sudo find pimcore -type f -exec chmod 640 {} \;
+sudo find pimcore -type d -exec chmod 750 {} \;
+sudo find pimcore -type f -exec chmod 640 {} \;
 sudo find src -type f -exec chmod 640 {} \;
 sudo find src -type d -exec chmod 750 {} \;
 #sudo find app -type f -exec chmod 640 {} \;
