@@ -18,7 +18,7 @@ fi
 
 echo "Extracting Zip....."
 
-zip ${buildZipName} -r . -x "var/classes" -x "var/classes/*" -x "var/sessions" -x "var/sessions/*"  -x "var/versions" -x "var/versions/*" -x "var/cache" -x "var/cache/*" -x "pimcore" -x "pimcore/*" -x ".scannerwork" -x ".scannerwork/*" -x "web/var" -x "web/var/*" -x "*.git*" -x "*.git*/*" -x "*.zip" > /dev/null
+zip ${buildZipName} -r . -x "var/classes" -x "var/classes/*" -x "var/sessions" -x "var/sessions/*"  -x "var/versions" -x "var/versions/*" -x "var/cache" -x "var/cache/*" -x "pimcore" -x "pimcore/*" -x ".scannerwork" -x ".scannerwork/*" -x "*.git*" -x "*.git*/*" -x "*.zip" > /dev/null
 
 echo "Zip created successfully"
 
