@@ -22,7 +22,7 @@ crontab -u root -r
 dos2unix /tmp/crontab.txt
 crontab -u root /tmp/crontab.txt
 
-fi
+#fi
 
 #vend="/var/www/html/vendor";
 #if [ ! -d "$vend" ]
