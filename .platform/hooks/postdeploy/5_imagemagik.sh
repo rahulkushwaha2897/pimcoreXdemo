@@ -69,7 +69,7 @@ sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
 sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
-sudo -u webapp php bin/console assets:install --relative --symlink web
+sudo -u webapp php bin/console assets:install --relative --symlink public
 sudo chown -R webapp:webapp *
 sudo chmod -R 775 *
 sudo service httpd restart restart
