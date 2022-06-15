@@ -60,10 +60,10 @@ wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /u
 chmod 0755 /usr/bin/cjpeg
 
 cd /var/www/html/
-cd builds/
-mv * /efs/storage/var/classes/
-cd /var/www/html/
-rm -rf /var/www/html/builds
+#cd builds/
+#mv * /efs/storage/var/classes/
+#cd /var/www/html/
+#rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
