@@ -12,11 +12,11 @@ sudo find pimcore -type d -exec chmod 750 {} \;
 sudo find pimcore -type f -exec chmod 640 {} \;
 sudo find src -type f -exec chmod 640 {} \;
 sudo find src -type d -exec chmod 750 {} \;
-#sudo find app -type f -exec chmod 640 {} \;
-#sudo find app -type d -exec chmod 750 {} \;
+sudo find app -type f -exec chmod 640 {} \;
+sudo find app -type d -exec chmod 750 {} \;
 sudo find vendor -type d -exec chmod 750 {} \;
 sudo find vendor -type f -exec chmod 640 {} \;
-#sudo find web -type d -exec chmod 750 {} \;
-#sudo find web -type f -exec chmod 640 {} \;
+sudo find web -type d -exec chmod 750 {} \;
+sudo find web -type f -exec chmod 640 {} \;
 chown -R webapp:webapp /efs/storage/var/classes
 chmod -R 0775 /efs/storage/var/classes
