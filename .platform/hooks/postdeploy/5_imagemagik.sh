@@ -44,20 +44,20 @@ mv bin/wkhtmlto* /usr/bin/
 cd /home/ec2-user
 rm -rf ffmpeg* ImageMagick* wkhtmltox*
 
-wget https://github.com/imagemin/zopflipng-bin/raw/master/vendor/linux/zopflipng -O /usr/bin/zopflipng
-chmod 0755 /usr/bin/zopflipng
-wget https://github.com/imagemin/pngcrush-bin/raw/master/vendor/linux/pngcrush -O /usr/bin/pngcrush
-chmod 0755 /usr/bin/pngcrush
-wget https://github.com/imagemin/jpegoptim-bin/raw/master/vendor/linux/jpegoptim -O /usr/bin/jpegoptim
-chmod 0755 /usr/bin/jpegoptim
-wget https://github.com/imagemin/pngout-bin/raw/master/vendor/linux/x64/pngout -O /usr/bin/pngout
-chmod 0755 /usr/bin/pngout
-wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
-chmod 0755 /usr/bin/cjpeg
-wget https://github.com/imagemin/advpng-bin/raw/master/vendor/linux/advpng -O /usr/bin/advpng
-chmod 0755 /usr/bin/advpng
-wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
-chmod 0755 /usr/bin/cjpeg
+#wget https://github.com/imagemin/zopflipng-bin/raw/master/vendor/linux/zopflipng -O /usr/bin/zopflipng
+#chmod 0755 /usr/bin/zopflipng
+#wget https://github.com/imagemin/pngcrush-bin/raw/master/vendor/linux/pngcrush -O /usr/bin/pngcrush
+#chmod 0755 /usr/bin/pngcrush
+#wget https://github.com/imagemin/jpegoptim-bin/raw/master/vendor/linux/jpegoptim -O /usr/bin/jpegoptim
+#chmod 0755 /usr/bin/jpegoptim
+#wget https://github.com/imagemin/pngout-bin/raw/master/vendor/linux/x64/pngout -O /usr/bin/pngout
+#chmod 0755 /usr/bin/pngout
+#wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
+#chmod 0755 /usr/bin/cjpeg
+#wget https://github.com/imagemin/advpng-bin/raw/master/vendor/linux/advpng -O /usr/bin/advpng
+#chmod 0755 /usr/bin/advpng
+#wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
+#chmod 0755 /usr/bin/cjpeg
 
 cd /var/www/html/
 #cd builds/
