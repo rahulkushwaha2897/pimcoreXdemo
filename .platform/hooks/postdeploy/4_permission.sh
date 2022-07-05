@@ -18,5 +18,5 @@ sudo find vendor -type d -exec chmod 750 {} \;
 sudo find vendor -type f -exec chmod 640 {} \;
 #sudo find web -type d -exec chmod 750 {} \;
 #sudo find web -type f -exec chmod 640 {} \;
-chown -R webapp:webapp mnt/efs/var
-chmod -R 0775 mnt/efs/var
+#chown -R webapp:webapp mnt/efs/var
+#chmod -R 0775 mnt/efs/var
