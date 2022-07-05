@@ -4,8 +4,8 @@
 yum install stunnel -y
 cd  /var/www/html/var
 mv tmp old-tmp
-mv classes/* mnt/efs/var/classes/
-mv config/* mnt/efs/var/config/
+mv classes/* /mnt/efs/var/classes/
+mv config/* /mnt/efs/var/config/
 #linking var directory with efs storage directory
 #linking /var/www/html/var/* files
 rm -rf classes config versions
