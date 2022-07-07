@@ -19,9 +19,9 @@ yum install cairo.x86_64 -y
 yum install cups.x86_64 -y
 yum install libwebp-devel.x86_64 libwebp.x86_64 libwebp-java.x86_64 libwebp-tools.x86_64 -y
 yum install php-pecl-apcu-devel.noarch php-pecl-apcu.x86_64 -y
-yum remove ImageMagick.x86_64 ImageMagick-devel.x86_64  ImageMagick-c++.x86_64 ImageMagick.x86_64 -y
-yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
-yum install libexif-devel.x86_64 libexif.x86_64 -y
+#yum remove ImageMagick.x86_64 ImageMagick-devel.x86_64  ImageMagick-c++.x86_64 ImageMagick.x86_64 -y
+#yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
+#yum install libexif-devel.x86_64 libexif.x86_64 -y
 
 
 printf "/usr/local" |pecl install imagick 
@@ -30,10 +30,10 @@ printf "/usr/local" |pecl install imagick
 
 cd /home/ec2-user
 
-aws s3 cp s3://guardian-packages/ffmpeg-release-amd64-static.tar.xz .
-tar -xf ffmpeg-release-amd64-static.tar.xz
-cd ffmpeg-4.2.2-amd64-static
-mv ffmpeg ffprobe /usr/bin/
+#aws s3 cp s3://guardian-packages/ffmpeg-release-amd64-static.tar.xz .
+#tar -xf ffmpeg-release-amd64-static.tar.xz
+#cd ffmpeg-4.2.2-amd64-static
+#mv ffmpeg ffprobe /usr/bin/
 
 #cd /home/ec2-user
 #aws s3 cp s3://guardian-packages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
