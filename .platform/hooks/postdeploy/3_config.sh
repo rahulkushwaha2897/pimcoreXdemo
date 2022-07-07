@@ -6,9 +6,8 @@ mv /var/www/html/.eb-benstalk/templates/stage/crontab.txt /tmp/crontab.txt
 mv /var/www/html/.eb-benstalk/templates/stage/php.ini /etc/php.ini
 mv /var/www/html/.eb-benstalk/templates/stage/composer.json /var/www/html/composer.json
 mv /var/www/html/.eb-benstalk/templates/stage/htaccess /var/www/html/public/.htaccess
-ll -a /var/www/html/public/
 mv /var/www/html/.eb-benstalk/templates/stage/database.yml /var/www/html/config/local/database.yml
-ll -a /var/www/html/
+
 
 cronsdir="/opt/crons"
   if [ ! -d $cronsdir ]
