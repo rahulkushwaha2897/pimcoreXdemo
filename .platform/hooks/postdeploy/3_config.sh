@@ -6,6 +6,7 @@ mv /var/www/html/.eb-benstalk/templates/stage/crontab.txt /tmp/crontab.txt
 mv /var/www/html/.eb-benstalk/templates/stage/php.ini /etc/php.ini
 mv /var/www/html/.eb-benstalk/templates/stage/composer.json /var/www/html/composer.json
 mv /var/www/html/.eb-benstalk/templates/stage/htaccess /var/www/html/public/.htaccess
+mv .htaccess htaccess 
 mv /var/www/html/.eb-benstalk/templates/stage/database.yml /var/www/html/config/local/database.yml
 
 
