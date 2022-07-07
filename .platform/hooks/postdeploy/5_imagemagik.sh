@@ -41,8 +41,8 @@ tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
 cd wkhtmltox
 mv bin/wkhtmlto* /usr/bin/
 
-cd /home/ec2-user
-rm -rf ffmpeg* ImageMagick* wkhtmltox*
+#cd /home/ec2-user
+#rm -rf ffmpeg* ImageMagick* wkhtmltox*
 
 #wget https://github.com/imagemin/zopflipng-bin/raw/master/vendor/linux/zopflipng -O /usr/bin/zopflipng
 #chmod 0755 /usr/bin/zopflipng
@@ -64,12 +64,12 @@ cd /var/www/html/
 #mv * /efs/storage/var/classes/
 #cd /var/www/html/
 #rm -rf /var/www/html/builds
-sudo php -d memory_limit=-1 /usr/bin/composer.phar install
+sudo php -d memory_limit=-1 composer install
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
 sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
-sudo -u webapp php bin/console assets:install --relative --symlink web
+sudo -u webapp php bin/console assets:install 
 sudo chown -R webapp:webapp *
 sudo chmod -R 0775 *
 sudo service httpd restart restart
