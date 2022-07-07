@@ -3,7 +3,7 @@
 cd /home/ec2-user/
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/bin/composer
-sudo /usr/bin/composer.phar self-update --2.2
+composer.phar self-update --2.2
 yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
 yum install inkscape.x86_64 inkscape-view.x86_64 -y
 yum install libtiff.x86_64 libtiff-static.x86_64 -y
