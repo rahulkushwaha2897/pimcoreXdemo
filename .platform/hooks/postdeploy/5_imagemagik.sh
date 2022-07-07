@@ -1,11 +1,9 @@
 #!/bin/bash
 
 cd /home/ec2-user/
-sudo curl -sS https://getcomposer.org/installer | php
+sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/bin/composer
-sudo chmod +x /usr/bin/composer
-sudo composer self-update 
-sudo composer self-update --2.2
+sudo composer self-update 2.2
 yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
 yum install inkscape.x86_64 inkscape-view.x86_64 -y
 yum install libtiff.x86_64 libtiff-static.x86_64 -y
@@ -66,15 +64,15 @@ cd /var/www/html/
 #mv * /efs/storage/var/classes/
 #cd /var/www/html/
 #rm -rf /var/www/html/builds
-sudo php -d memory_limit=-1 composer install
+sudo php -d memory_limit=-1 /usr/bin/composer.phar install
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
-sudo -u webapp php bin/console pimcore:deployment:classes-rebuild -d -c -q
-sudo -u webapp php bin/console assets:install --relative --symlink public
+sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
+sudo -u webapp php bin/console assets:install --relative --symlink web
 sudo chown -R webapp:webapp *
 sudo chmod -R 775 *
-sudo service httpd restart
+sudo service httpd restart restart
 sudo service php-fpm restart
 
 ###Deployment Done
