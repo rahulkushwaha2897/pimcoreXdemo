@@ -1,15 +1,17 @@
 #!/bin/bash
 
-cd /
+cd /home/ec2-user/
+sudo su
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/bin/composer
-sudo composer self-update 2.2
-yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
-yum install inkscape.x86_64 inkscape-view.x86_64 -y
-yum install libtiff.x86_64 libtiff-static.x86_64 -y
-yum install libpng.x86_64 libpng-devel.x86_64 libpng-static.x86_64 pngcrush.x86_64 -y
-yum install lcms-libs.x86_64 lcms2-utils.x86_64 lcms-devel.x86_64 lcms.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
-yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
+composer self-update
+sudo composer self-update --2.2
+sudo yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
+sudo yum install inkscape.x86_64 inkscape-view.x86_64 -y
+sudo yum install libtiff.x86_64 libtiff-static.x86_64 -y
+sudo yum install libpng.x86_64 libpng-devel.x86_64 libpng-static.x86_64 pngcrush.x86_64 -y
+sudo yum install lcms-libs.x86_64 lcms2-utils.x86_64 lcms-devel.x86_64 lcms.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
+sudo yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install php-redis -y
 yum install python3-pip.noarch -y
 pip3 install html2text
@@ -71,7 +73,7 @@ sudo -u webapp php bin/console cache:warmup
 sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
 sudo -u webapp php bin/console assets:install --relative --symlink web
 sudo chown -R webapp:webapp *
-sudo chmod -R 775 *
+sudo chmod -R 0775 *
 sudo service httpd restart restart
 sudo service php-fpm restart
 
