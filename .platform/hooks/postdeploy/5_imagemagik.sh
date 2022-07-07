@@ -35,11 +35,11 @@ tar -xf ffmpeg-release-amd64-static.tar.xz
 cd ffmpeg-4.2.2-amd64-static
 mv ffmpeg ffprobe /usr/bin/
 
-cd /home/ec2-user
-aws s3 cp s3://guardian-packages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
-tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
-cd wkhtmltox
-mv bin/wkhtmlto* /usr/bin/
+#cd /home/ec2-user
+#aws s3 cp s3://guardian-packages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
+#tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+#cd wkhtmltox
+#mv bin/wkhtmlto* /usr/bin/
 
 #cd /home/ec2-user
 #rm -rf ffmpeg* ImageMagick* wkhtmltox*
