@@ -12,12 +12,12 @@ yum install lcms-libs.x86_64 lcms2-utils.x86_64 lcms-devel.x86_64 lcms.x86_64 lc
 yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install php-redis -y
 #yum install python3-pip.noarch -y
-pip3 install html2text
+#pip3 install html2text
 yum install java-1.8.0-openjdk-headless.x86_64 -y
-yum install dbus-glib.x86_64 -y
-yum install cairo.x86_64 -y
-yum install cups.x86_64 -y
-yum install libwebp-devel.x86_64 libwebp.x86_64 libwebp-java.x86_64 libwebp-tools.x86_64 -y
+#yum install dbus-glib.x86_64 -y
+#yum install cairo.x86_64 -y
+#yum install cups.x86_64 -y
+#yum install libwebp-devel.x86_64 libwebp.x86_64 libwebp-java.x86_64 libwebp-tools.x86_64 -y
 #yum install php-pecl-apcu-devel.noarch php-pecl-apcu.x86_64 -y
 #yum remove ImageMagick.x86_64 ImageMagick-devel.x86_64  ImageMagick-c++.x86_64 ImageMagick.x86_64 -y
 #yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
