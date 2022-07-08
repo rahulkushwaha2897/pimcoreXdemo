@@ -24,11 +24,11 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 #yum install libexif-devel.x86_64 libexif.x86_64 -y
 
 
-printf "/usr/local" |pecl install imagick 
+#printf "/usr/local" |pecl install imagick 
 #printf "no" |pecl install redis
 
 
-cd /home/ec2-user
+#cd /home/ec2-user
 
 #aws s3 cp s3://guardian-packages/ffmpeg-release-amd64-static.tar.xz .
 #tar -xf ffmpeg-release-amd64-static.tar.xz
@@ -60,6 +60,7 @@ cd /home/ec2-user
 #chmod 0755 /usr/bin/cjpeg
 
 cd /var/www/html/
+composer self-update --2.2
 #cd builds/
 #mv * /efs/storage/var/classes/
 #cd /var/www/html/
