@@ -60,6 +60,7 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 #chmod 0755 /usr/bin/cjpeg
 
 cd /var/www/html/
+php -r "readfile('https://getcomposer.org/installer');" | php
 composer self-update --2.2
 #cd builds/
 #mv * /efs/storage/var/classes/
