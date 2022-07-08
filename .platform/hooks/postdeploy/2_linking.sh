@@ -20,8 +20,8 @@ cd  /var/www/html/
 rm -rf var
 ln -s /efs/storage/web-var  var 
 
-cd /var/www/html
+#cd /var/www/html
 #if [ -d "builds" ]
 #then
 #echo "Copying  build folders and files to classes"
-sudo cp -rf builds/* var/classes/
+#sudo cp -rf builds/* var/classes/
