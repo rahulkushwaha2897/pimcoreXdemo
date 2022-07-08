@@ -60,6 +60,6 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 #chmod 0755 /usr/bin/advpng
 #wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
 #chmod 0755 /usr/bin/cjpeg
-
+cd /var/www/html
 sudo composer install
 ###Deployment Done
