@@ -16,7 +16,7 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 
 cd /var/www/html
 
-sudo composer install
+sudo composer.phar install
 
 #cd /var/www/html/
 #cd builds/
