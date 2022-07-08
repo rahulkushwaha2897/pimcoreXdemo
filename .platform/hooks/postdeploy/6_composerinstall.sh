@@ -3,7 +3,7 @@
 
 cd /var/www/html/
 #cd builds/
-#mv * /efs/storage/var/classes/
+mv * /efs/storage/var/classes/
 #cd /var/www/html/
 #rm -rf /var/www/html/builds
 #sudo php -d memory_limit=-1 composer install
