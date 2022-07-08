@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd /
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/bin/composer
 composer self-update --2.2
@@ -59,22 +58,5 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 #wget https://github.com/imagemin/mozjpeg-bin/raw/master/vendor/linux/cjpeg -O /usr/bin/cjpeg
 #chmod 0755 /usr/bin/cjpeg
 
-cd /var/www/html/
-php -r "readfile('https://getcomposer.org/installer');" | php
-composer self-update --2.2
-#cd builds/
-#mv * /efs/storage/var/classes/
-#cd /var/www/html/
-#rm -rf /var/www/html/builds
-sudo php -d memory_limit=-1 composer install
-sudo chown -R webapp:webapp *
-sudo -u webapp php bin/console cache:clear
-sudo -u webapp php bin/console cache:warmup
-sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
-sudo -u webapp php bin/console assets:install 
-sudo chown -R webapp:webapp *
-sudo chmod -R 0775 *
-sudo service httpd restart 
-sudo service php-fpm restart
 
 ###Deployment Done
