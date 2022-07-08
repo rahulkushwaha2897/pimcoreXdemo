@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ec2-user/
+cd /
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/bin/composer
 composer self-update --2.2
