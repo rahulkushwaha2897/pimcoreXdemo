@@ -73,7 +73,7 @@ sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
 sudo -u webapp php bin/console assets:install 
 sudo chown -R webapp:webapp *
 sudo chmod -R 0775 *
-sudo service httpd restart restart
+sudo service httpd restart 
 sudo service php-fpm restart
 
 ###Deployment Done
