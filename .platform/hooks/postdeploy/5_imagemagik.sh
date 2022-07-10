@@ -21,7 +21,7 @@ cp /usr/bin/composer.phar /usr/bin/composer
 #mv * /efs/storage/var/classes/
 cd /var/www/html/
 
-
+sudo composer self-update 
 #rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
 sudo composer.phar self-update
