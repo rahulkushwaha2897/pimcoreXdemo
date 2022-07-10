@@ -26,14 +26,11 @@ cd /var/www/html/
 #sudo composer self-update
 #rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
-sudo composer self-update
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
 sudo php bin/console pimcore:deployment:classes-rebuild -d -c -q
 sudo -u webapp php bin/console assets:install --relative --symlink public
-#mv /var/www/html/.eb-benstalk/templates/stage/AwsS3V3Adapter.php /var/www/html/vendor/league/flysystem-aws-s3-v3/AwsS3V3Adapter.php
-#mv /var/www/html/.eb-benstalk/templates/prod/AwsS3V3Adapter.php /var/www/html/vendor/league/flysystem-aws-s3-v3/AwsS3V3Adapter.php
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
 sudo chown -R webapp:webapp *
