@@ -27,7 +27,9 @@ cp /usr/bin/composer.phar /usr/bin/composer
 #cd builds/
 #mv * /efs/storage/var/classes/
 cd /var/www/html/
-sudo composer self-update
+sudo composer self-update --2
+sudo composer update ocramius/package-versions
+#sudo composer self-update
 #rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
 sudo composer self-update
