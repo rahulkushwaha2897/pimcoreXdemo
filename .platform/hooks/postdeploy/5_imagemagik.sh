@@ -23,7 +23,7 @@ cd /var/www/html/
 
 sudo composer self-update 
 #rm -rf /var/www/html/builds
-sudo php -d memory_limit=-1 /usr/bin/composer.phar install
+sudo php -d memory_limit=-1 /usr/bin/composer install
 sudo composer.phar self-update
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
