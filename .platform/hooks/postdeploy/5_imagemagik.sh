@@ -22,13 +22,13 @@ yum install libexif-devel.x86_64 libexif.x86_64 -y
 
 
 cp /usr/bin/composer.phar /usr/bin/composer
-
+sudo composer self-update --2
+sudo composer update ocramius/package-versions
 #cd /var/www/html/
 #cd builds/
 #mv * /efs/storage/var/classes/
 cd /var/www/html/
-sudo composer self-update --2
-sudo composer update ocramius/package-versions
+
 #sudo composer self-update
 #rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
