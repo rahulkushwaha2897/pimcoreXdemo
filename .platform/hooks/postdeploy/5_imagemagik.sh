@@ -15,7 +15,7 @@ yum install php-redis -y
 
 yum install java-1.8.0-openjdk-headless.x86_64 -y
 
-cd /var/www/html
+cd /var/www/html/
 
 #cd /var/www/html/
 #cd builds/
