@@ -3,8 +3,8 @@
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
-composer self-update
-composer self-update --2.2
+#composer self-update
+#composer self-update --2.2
 yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
 yum install inkscape.x86_64 inkscape-view.x86_64 -y
 yum install libtiff.x86_64 libtiff-static.x86_64 -y
@@ -16,16 +16,13 @@ yum install php-redis -y
 yum install java-1.8.0-openjdk-headless.x86_64 -y
 
 cd /var/www/html
-composer self-update
-composer self-update --2.2
-sudo composer.phar self-update
-sudo composer.phar self-update --2.2
+
 #cd /var/www/html/
 #cd builds/
 #mv * /efs/storage/var/classes/
 #cd /var/www/html/
 #rm -rf /var/www/html/builds
-#sudo php -d memory_limit=-1 composer install
+sudo php -d memory_limit=-1 composer install
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
