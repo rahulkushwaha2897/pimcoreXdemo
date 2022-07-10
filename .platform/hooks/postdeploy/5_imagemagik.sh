@@ -19,27 +19,7 @@ yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
 yum install libexif-devel.x86_64 libexif.x86_64 -y
 
 
-#printf "/usr/local" |pecl install imagick 
-#printf "no" |pecl install redis
 
-
-#cd /home/ec2-user
-
-#aws s3 cp s3://usppackages/ffmpeg-release-amd64-static.tar.xz .
-#tar -xf ffmpeg-release-amd64-static.tar.xz
-#cd ffmpeg-4.2.2-amd64-static
-#mv ffmpeg ffprobe /usr/bin/
-
-#cd /home/ec2-user
-#aws s3 cp s3://usppackages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
-#tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
-#cd wkhtmltox
-#mv bin/wkhtmlto* /usr/bin/
-
-#cd /home/ec2-user
-#rm -rf ffmpeg* ImageMagick* wkhtmltox*
-
-#stunnel /etc/stunnel/redis.conf
 
 cp /usr/bin/composer.phar /usr/bin/composer
 
@@ -47,8 +27,10 @@ cp /usr/bin/composer.phar /usr/bin/composer
 #cd builds/
 #mv * /efs/storage/var/classes/
 cd /var/www/html/
+sudo composer self-update
 #rm -rf /var/www/html/builds
 sudo php -d memory_limit=-1 /usr/bin/composer.phar install
+sudo composer self-update
 sudo chown -R webapp:webapp *
 sudo -u webapp php bin/console cache:clear
 sudo -u webapp php bin/console cache:warmup
