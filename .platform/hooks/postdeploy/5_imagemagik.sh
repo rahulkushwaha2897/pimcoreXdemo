@@ -3,8 +3,7 @@
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
-#composer self-update
-#composer self-update --2.2
+
 yum install libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 libjpeg-turbo-static.x86_64 libjpeg-turbo-utils.x86_64 openjpeg.x86_64 openjpeg-devel.x86_64 openjpeg-libs.x86_64 turbojpeg.x86_64 turbojpeg-devel.x86_64 gd.x86_64 jasper.x86_64 -y
 yum install inkscape.x86_64 inkscape-view.x86_64 -y
 yum install libtiff.x86_64 libtiff-static.x86_64 -y
