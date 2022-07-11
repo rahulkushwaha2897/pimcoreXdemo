@@ -7,16 +7,41 @@ yum install libtiff.x86_64 libtiff-static.x86_64 -y
 yum install libpng.x86_64 libpng-devel.x86_64 libpng-static.x86_64 pngcrush.x86_64 -y
 yum install lcms2-utils.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
 yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
+yum install python3-pip.noarch -y
+pip3 install html2text
 yum install java-1.8.0-openjdk-headless.x86_64 -y
-#yum install redis -y
-sudo amazon-linux-extras install redis6 -y
-sudo amazon-linux-extras install epel -y
-sudo yum install gcc jemalloc-devel openssl-devel tcl tcl-devel -y
-sudo wget http://download.redis.io/redis-stable.tar.gz
-sudo tar xvzf redis-stable.tar.gz
-#cd /var/www/redis-stable/
-#src/redis-cli -h pimcorexredis.fg3mcd.ng.0001.use1.cache.amazonaws.com 
+yum install dbus-glib.x86_64 -y
+yum install cairo.x86_64 -y
+yum install cups.x86_64 -y
+yum install libwebp-devel.x86_64 libwebp.x86_64 libwebp-java.x86_64 libwebp-tools.x86_64 -y
+yum install ImageMagick.x86_64 ImageMagick-devel.x86_64  ImageMagick-c++.x86_64 ImageMagick.x86_64 -y
+yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
+yum install libexif-devel.x86_64 libexif.x86_64 -y
 
+
+printf "/usr/local" |pecl install imagick 
+printf "no" |pecl install redis
+
+
+cd /
+
+aws s3 cp s3://usppackages/ffmpeg-release-amd64-static.tar.xz .
+tar -xf ffmpeg-release-amd64-static.tar.xz
+cd ffmpeg-4.2.2-amd64-static
+mv ffmpeg ffprobe /usr/bin/
+
+cd /
+aws s3 cp s3://usppackages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
+tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+cd wkhtmltox
+mv bin/wkhtmlto* /usr/bin/
+
+cd /home/ec2-user
+rm -rf ffmpeg* ImageMagick* wkhtmltox*
+
+stunnel /etc/stunnel/redis.conf
+
+#cp /usr/bin/composer.phar /usr/bin/composer
 
 
 
