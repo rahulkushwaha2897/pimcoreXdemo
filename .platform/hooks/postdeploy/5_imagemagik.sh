@@ -14,8 +14,8 @@ sudo amazon-linux-extras install epel -y
 sudo yum install gcc jemalloc-devel openssl-devel tcl tcl-devel -y
 sudo wget http://download.redis.io/redis-stable.tar.gz
 sudo tar xvzf redis-stable.tar.gz
-cd /var/www/src/redis-stable
-src/redis-cli -h pimcorexredis.fg3mcd.ng.0001.use1.cache.amazonaws.com 
+#cd /var/www/redis-stable/
+#src/redis-cli -h pimcorexredis.fg3mcd.ng.0001.use1.cache.amazonaws.com 
 
 
 
