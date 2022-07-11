@@ -8,8 +8,14 @@ yum install libpng.x86_64 libpng-devel.x86_64 libpng-static.x86_64 pngcrush.x86_
 yum install lcms2-utils.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
 yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install java-1.8.0-openjdk-headless.x86_64 -y
-yum install redis -y
+#yum install redis -y
 sudo amazon-linux-extras install redis6 -y
+sudo amazon-linux-extras install epel -y
+sudo yum install gcc jemalloc-devel openssl-devel tcl tcl-devel -y
+sudo wget http://download.redis.io/redis-stable.tar.gz
+sudo tar xvzf redis-stable.tar.gz
+cd /var/www/src/redis-stable
+src/redis-cli -h pimcorexredis.fg3mcd.ng.0001.use1.cache.amazonaws.com 
 
 
 
