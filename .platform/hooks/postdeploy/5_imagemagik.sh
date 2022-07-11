@@ -8,6 +8,8 @@ yum install libpng.x86_64 libpng-devel.x86_64 libpng-static.x86_64 pngcrush.x86_
 yum install lcms2-utils.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
 yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install java-1.8.0-openjdk-headless.x86_64 -y
+yum install redis -y
+sudo amazon-linux-extras install redis6 -y
 
 
 
