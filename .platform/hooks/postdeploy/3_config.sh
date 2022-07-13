@@ -4,6 +4,7 @@
 mv /var/www/html/.eb-benstalk/templates/stage/php.conf /etc/httpd/conf.d/elasticbeanstalk/php.conf
 mv /var/www/html/.eb-benstalk/templates/stage/crontab.txt /tmp/crontab.txt
 mv /var/www/html/.eb-benstalk/templates/stage/php.ini /etc/php.ini
+mv /var/www/html/.eb-benstalk/templates/stage/cache.yaml /var/www/html/config/cache.yaml
 mv /var/www/html/.eb-benstalk/templates/stage/composer.json /var/www/html/composer.json
 mv /var/www/html/.eb-benstalk/templates/stage/composer.lock /var/www/html/composer.lock
 
