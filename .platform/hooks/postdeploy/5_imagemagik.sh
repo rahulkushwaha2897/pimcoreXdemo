@@ -10,34 +10,27 @@ yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install python3-pip.noarch -y
 pip3 install html2text
 yum install java-1.8.0-openjdk-headless.x86_64 -y
-yum install dbus-glib.x86_64 -y
-yum install cairo.x86_64 -y
-yum install cups.x86_64 -y
-yum install libwebp-devel.x86_64 libwebp.x86_64 libwebp-java.x86_64 libwebp-tools.x86_64 -y
-yum install ImageMagick.x86_64 ImageMagick-devel.x86_64  ImageMagick-c++.x86_64 ImageMagick.x86_64 -y
-yum install graphviz-devel.x86_64 graphviz-gd.x86_64 graphviz-graphs.x86_64 -y
-yum install libexif-devel.x86_64 libexif.x86_64 -y
+yum install php-redis -y
 
-
-printf "/usr/local" |pecl install imagick 
+#printf "/usr/local" |pecl install imagick 
 printf "no" |pecl install redis
 
 
-cd /
+#cd /
 
-aws s3 cp s3://usppackages/ffmpeg-release-amd64-static.tar.xz .
-tar -xf ffmpeg-release-amd64-static.tar.xz
-cd ffmpeg-4.2.2-amd64-static
-mv ffmpeg ffprobe /usr/bin/
+#aws s3 cp s3://usppackages/ffmpeg-release-amd64-static.tar.xz .
+#tar -xf ffmpeg-release-amd64-static.tar.xz
+#cd ffmpeg-4.2.2-amd64-static
+#mv ffmpeg ffprobe /usr/bin/
 
-cd /
-aws s3 cp s3://usppackages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
-tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
-cd wkhtmltox
-mv bin/wkhtmlto* /usr/bin/
+#cd /
+#aws s3 cp s3://usppackages/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz .
+#tar -xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+#cd wkhtmltox
+#mv bin/wkhtmlto* /usr/bin/
 
 cd /home/ec2-user
-rm -rf ffmpeg* ImageMagick* wkhtmltox*
+#rm -rf ffmpeg* ImageMagick* wkhtmltox*
 
 stunnel /etc/stunnel/redis.conf
 
