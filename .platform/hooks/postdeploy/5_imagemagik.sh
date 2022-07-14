@@ -68,6 +68,7 @@ sudo chown -R webapp:webapp /efs/storage/var/config
 sudo chmod -R 775 /efs/storage/var/config
 sudo chown -R webapp:webapp /efs/storage/web-var
 sudo chmod -R 775 /efs/storage/web-var
+sudo composer require predis/predis
 sudo service httpd restart
 sudo service php-fpm restart
 
