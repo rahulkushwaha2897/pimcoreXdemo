@@ -9,8 +9,16 @@ yum install lcms2-utils.x86_64 lcms2.x86_64 lcms2-devel.x86_64 -y
 yum install librsvg2-devel.x86_64 librsvg2-tools.x86_64 librsvg2.x86_64 -y
 yum install python3-pip.noarch -y
 pip3 install html2text
-yum install java-1.8.0-openjdk-headless.x86_64 -y
-yum install php-redis -y
+    sudo yum install java-1.8.0-openjdk-headless.x86_64 -y
+   sudo  yum update -y
+    sudo yum -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    sudo yum makecache
+    sudo yum -y install yum-utils
+    sudo yum clean metadata
+    yum install php80-php-redis -y
+    yum install php-redis -y
+  
 
 #printf "/usr/local" |pecl install imagick 
 #printf "no" |pecl install redis
