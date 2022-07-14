@@ -13,7 +13,7 @@ yum install java-1.8.0-openjdk-headless.x86_64 -y
 yum install php-redis -y
 
 #printf "/usr/local" |pecl install imagick 
-printf "no" |pecl install redis
+#printf "no" |pecl install redis
 
 
 #cd /
