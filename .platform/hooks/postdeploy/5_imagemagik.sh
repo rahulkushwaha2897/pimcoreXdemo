@@ -34,7 +34,7 @@ printf "no" |pecl install redis
 cd /home/ec2-user
 #rm -rf ffmpeg* ImageMagick* wkhtmltox*
 
-stunnel /etc/stunnel/redis.conf
+stunnel /etc/stunnel/redis-cli.conf
 
 #cp /usr/bin/composer.phar /usr/bin/composer
 
