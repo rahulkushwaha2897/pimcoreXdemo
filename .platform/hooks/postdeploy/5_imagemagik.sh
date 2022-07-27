@@ -16,7 +16,7 @@ sudo yum makecache
 sudo yum -y install yum-utils
 sudo yum clean metadata
 sudo yum install php80-php-redis -y
-sudo yum install php-redis -y    
+#sudo yum install php-redis -y    
   #sudo  yum update -y
   #  sudo yum -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
   #  sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
