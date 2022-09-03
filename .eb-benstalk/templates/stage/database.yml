@@ -1,2 +1,2 @@
 doctrine:
-    dbal: { connections: { default: { host: database-1.c2iubwxfmyim.us-east-1.rds.amazonaws.com, port: 3306, user: admin, password: rahul123, dbname: Mydemo, mapping_types: { enum: string, bit: boolean }, server_version: 4.14.276-211.499.amzn2.x86_64 } } }
+    dbal: { connections: { default: { host: database-1.cnnk14aepnnx.us-east-1.rds.amazonaws.com, port: 3306, user: admin, password: rahul123, dbname: Mydemo, mapping_types: { enum: string, bit: boolean }, server_version: 4.14.276-211.499.amzn2.x86_64 } } }
