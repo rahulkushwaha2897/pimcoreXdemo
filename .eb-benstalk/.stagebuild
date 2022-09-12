@@ -2,8 +2,7 @@
 
 # Author: PGS
 
-codeBuildBucket="demopimcorw13215"
-
+codeBuildBucket="demopimcorw132156"
 buildFolder="builds"
 
 buildZipName="sample.zip"
