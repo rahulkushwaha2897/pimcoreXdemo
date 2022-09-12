@@ -2,7 +2,7 @@
 
 # Author: PGS
 
-codeBuildBucket="demopimcorw132156"
+codeBuildBucket="elasticbeanstalk-ap-southeast-1-683716129767"
 buildFolder="builds"
 
 buildZipName="sample.zip"
